@@ -1,5 +1,7 @@
 import gsap from 'gsap';
 
+import { NowPlaying } from 'schemas';
+
 export function textBlinkSwap(
     text: string,
     elem: HTMLElement,
@@ -31,4 +33,10 @@ export function textBlinkSwap(
             onComplete: callbacks?.afterReveal
         })
     ]
+}
+
+export function getSongName(nowPlaying: NowPlaying): string {
+    return [nowPlaying.artist, nowPlaying.song]
+        .filter(value => !!value && (value.trim() !== ''))
+        .join(' - ');
 }

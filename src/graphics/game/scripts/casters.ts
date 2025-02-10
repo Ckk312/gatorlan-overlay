@@ -1,4 +1,5 @@
 import { Casters } from 'schemas';
+import gsap from 'gsap';
 
 const casters = nodecg.Replicant<Casters>('casters', 'ipl-overlay-controls')!;
 const castersElem = document.getElementById('casters')!;

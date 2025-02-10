@@ -21,6 +21,8 @@ casters.on('change', (newValue, oldValue) => {
         return existing;
     }, '');
 
+    gsap.set([ castersWrapper, twittersWrapper ], { scale: values.length > 2 ? 0.7 : 1 });
+
     const newCasterIds = Object.keys(newValue!);
     const oldCasterIds = oldValue == null ? null : Object.keys(oldValue);
     const shouldRecreateCasterElements

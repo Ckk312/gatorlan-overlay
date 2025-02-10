@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game@gatorlan-overlay</title>
+</head>
+<body>
+<div class="scoreboard-container">
+    <div class="scoreboard-wrapper">
+        <div class="scoreboard-content layout vertical">
+            <div class="teams">
+                <div class="team-color" id="team-a-color"></div>
+                <p id="team-a-name" max-width="260">Team A</p>
+                <div class="team-score" id="team-a-score">-</div>
+
+                <div class="team-color" id="team-b-color"></div>
+                <p id="team-b-name" max-width="260">Team B</p>
+                <div class="team-score" id="team-b-score">-</div>
+            </div>
+            <div class="flavor-text-wrapper layout horiz c-horiz c-vert">
+                <p id="scoreboard-flavor-text" max-width="350"></p>
+            </div>
+        </div>
+    </div>
+    <div class="scoreboard-extra-container layout vertical">
+        <div class="scoreboard-extra layout vertical">
+            <div class="separator"></div>
+            <div class="layout horiz">
+                <div class="logo">
+                    <img src="assets/sac-logo-minimal-white.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="casters-container">
+    <div class="casters-content layout vertical">
+        <div class="casters-title">Commentators</div>
+        <div class="casters" id="casters"></div>
+    </div>
+</div>
+</body>
+</html>
