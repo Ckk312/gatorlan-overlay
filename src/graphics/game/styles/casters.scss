@@ -1,0 +1,42 @@
+@import '../../styles/constants';
+
+.casters-container {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    filter: $global-drop-shadow;
+}
+
+.casters-content {
+    width: 320px;
+    transform: translate(0px, 356px);
+
+    .casters-title {
+        background-color: $glan-background-1;
+        text-align: center;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .casters {
+        background-color: linear-gradient($glan-background-1, $glan-background-2);
+        padding: 12px 10px 4px;
+
+        > .caster {
+            margin-bottom: 10px;
+
+            > .name {
+                font-size: 38px;
+                font-weight: 500;
+                line-height: 38px;
+            }
+
+            > .extra {
+                font-size: 32px;
+                font-weight: 300;
+                line-height: 34px;
+            }
+        }
+    }
+}

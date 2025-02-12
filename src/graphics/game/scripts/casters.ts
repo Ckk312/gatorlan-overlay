@@ -8,8 +8,8 @@ casters.on('change', newValue => {
     castersElem.innerHTML = Object.values(newValue!).reduce((res: string, casterInfo) => {
         res += `
             <div class="caster">
-                <p class="name">${casterInfo.name} <span class="pronoun">${casterInfo.pronouns}</span><p>
-                <p class="extra">
+                <p class="name">${casterInfo.name} <span class="pronoun">${casterInfo.pronouns}</span></p>
+                <p class="extra">${casterInfo.twitter}</p>
             </div>
         `;
 

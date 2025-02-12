@@ -1,0 +1,100 @@
+@import '../../styles/constants';
+
+.stages-wrapper {
+    display: none;
+}
+
+.stages-layout {
+    display: grid;
+    height: 650px;
+    margin-bottom: 100px;
+    filter: $global-drop-shadow;
+
+    &.stage-count-3 {
+        width: 1300px;
+        gap: 50px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .stage-name {
+            clip-path: polygon(0 0, 100% 0, 100% 92px, 370px 100%, 0 100%);
+        }
+    }
+
+    &.stage-count-5 {
+        width: 1550px;
+        gap: 40px;
+        grid-template-columns: repeat(5, 1fr);
+
+        .stage-name {
+            clip-path: polygon(0 0, 100% 0, 100% 92px, 248px 100%, 0 100%);
+        }
+    }
+
+    &.stage-count-7 {
+        width: 1750px;
+        gap: 15px;
+        grid-template-columns: repeat(7, 1fr);
+
+        .stage-name {
+            clip-path: polygon(0 0, 100% 0, 100% 92px, 216px 100%, 0 100%);
+            font-size: 34px;
+            line-height: 39px;
+        }
+    }
+
+    > .stage {
+        text-align: center;
+        position: relative;
+        will-change: transform, opacity;
+
+        > .stage-image {
+            height: 75%;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        > .stage-winner {
+            height: 75%;
+            width: calc(100% - 20px);
+            padding: 0 10px;
+            position: absolute;
+            text-align: right;
+            font-size: 36px;
+            line-height: 42px;
+            transform: translate(5px, -5px);
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+
+
+            > .stage-winner-text {
+                display: inline;
+                margin-top: 5px;
+                position: relative;
+                z-index: 2;
+                -webkit-box-decoration-break: clone;
+                box-shadow: 10px 0 0 $glan-background-2, -10px 0 0 $sac-accent;
+                background-color: $glan-background-2;
+                overflow-wrap: break-word;
+            }
+        }
+
+        > .stage-mode {
+            background-color: $glan-background-2;
+            font-weight: 300;
+            font-size: 32px;
+            height: 45px;
+        }
+
+        > .stage-name {
+            flex-grow: 1;
+            background-color: $glan-background-1;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 45px;
+            padding: 0 10px;
+
+            > div {
+                margin-bottom: 2px;
+            }
+        }
+    }
+}

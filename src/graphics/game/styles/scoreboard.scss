@@ -1,0 +1,92 @@
+@import '../../styles/constants';
+
+.scoreboard-container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 370px;
+
+    > .scoreboard-extra-container {
+        width: 100%;
+
+        > .scoreboard-extra {
+            width: 29.8%;
+            opacity: 0;
+            align-self: flex-end;
+
+            .logo {
+                height: 38px;
+                background-color: $glan-background-2;
+                padding: 0 6px;
+                margin: 0;
+
+                > img {
+                    height: 30px;
+                    margin: 0;
+                    transform: translate(-1px, -5px);
+                }
+            }
+
+            > .separator {
+                height: 8px;
+                background-color: $glan-background-2;
+            }
+        }
+    }
+}
+
+.scoreboard-wrapper {
+    height: 140px;
+    overflow: hidden;
+    filter: $global-drop-shadow;
+}
+
+.scoreboard-content {
+    position: relative;
+    width: 370px;
+    transform: translate(0px, 140px);
+
+    > .teams {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        background: linear-gradient($glan-background-1, $glan-background-2);
+        height: 100px;
+        align-items: center;
+        justify-items: center;
+        padding: 2px 0;
+
+        > .team-color {
+            width: 35px;
+            height: 40px;
+            background-color: white;
+            border: 2px solid black;
+
+            > .team-score {
+                font-weight: 700;
+                font-size: 45px;
+                line-height: 45px;
+                text-align: center;
+            }
+        }
+
+        p {
+            justify-self: start;
+            font-size: 35px;
+            line-height: 30px;
+        }
+
+        
+    }
+
+    > .flavor-text-wrapper {
+        height: 36px;
+        background-color: $glan-background-2;
+        font-size: 30px;
+        font-weight: 300;
+
+        > p {
+            transform: translate(0, -3px);
+        }
+    }
+}
