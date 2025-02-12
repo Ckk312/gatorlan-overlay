@@ -22,7 +22,13 @@
     "compatibleRange": "^2.0.0",
     "graphics": [
       {
-        "file": "index.html",
+        "file": "break.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "game.html",
         "width": 1920,
         "height": 1080,
         "singleInstance": false
@@ -42,9 +48,15 @@
     ]
   },
   "scripts": {
-    "build": "node scripts/build.mjs --all",
+    "build": "cross-env NODE_ENV=production webpack",
+    "clean": "trash node_modules/.cache && trash graphics && trash dashboard",
+    "cleanbuild": "npm run clean && npm run build",
+    "start": "node ../..",
+    "watch": "webpack -w",
+    "lint": "eslint ./src",
+    "fix": "eslint ./src --fix",
+    "devbuild": "webpack",
     "build:extension": "node scripts/build.mjs --extension",
-    "watch": "node scripts/build.mjs --all --watch",
     "watch:browser": "node scripts/build.mjs --dashboard --graphics --watch",
     "watch:schemas": "node scripts/build.mjs --schemas --watch",
     "dev": "concurrently --kill-others \"npm run watch:schemas\" \"npm run watch:browser\" \"nodemon\"",
