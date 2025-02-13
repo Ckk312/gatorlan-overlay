@@ -48,6 +48,7 @@ const updateGames = async (games: UpdatedGames, winners: Array<UpdatedWinner>): 
         if (games.isNewMatch) {
             const modeTextMaxWidth = { '3': 380, '5': 258, '7': 217 }[games.changedGames.length];
             stagesLayout.classList.remove('stage-count-3', 'stage-count-5', 'stage-count-7');
+            stagesLayout.classList.add('stage-count-' + games.changedGames.length);
             stagesLayout.innerHTML = games.changedGames.reduce((prev, game) => {
                 prev += `
                     <div class="stage layout vertical" id="stage_${game.index}" style="opacity: 0">

@@ -1,16 +1,18 @@
 {
 	"compilerOptions": {
+		"allowJs": true,
+		"noImplicitAny": true,
+
 		// Required for parcel
 		"isolatedModules": true,
 		"jsx": "react",
 
 		// Output related
-		"target": "es2021",
-		"outDir": "./build",
+		"target": "es6",
 		"module": "esnext",
 
 		// Module resolution
-		"moduleResolution": "node",
+		"moduleResolution": "Node",
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
 
@@ -29,7 +31,7 @@
 			"dom.iterable"
 		],
 		"types": [
-			"@nodecg/types/augment-window"
+			"@nodecg/types/types/augment-window"
 		],
 		"baseUrl": ".",
 		"paths": {
@@ -37,6 +39,5 @@
 				"../ipl-overlay-controls/src/types/schemas/index"
 			]
 		}
-	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "node_modules/@nodecg/types/augment-window.d.ts"]
+	}
 }

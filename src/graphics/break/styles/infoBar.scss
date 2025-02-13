@@ -11,7 +11,7 @@
     .info-bar {
         height: 115px;
         width: 85%;
-        background-color: linear-gradient($glan-background-1, $glan-background-2);
+        background-image: linear-gradient($glan-background-1, $glan-background-2);
         opacity: 0;
         filter: $global-drop-shadow;
 
@@ -54,10 +54,14 @@
                 > .info-bar-separator {
                     width: 6px;
                     height: 80%;
-                    background-color: white;
+                    background-color: $glan-background-2;
                 }
             }
         }
+    }
+
+    p {
+        margin: 0px;
     }
 }
 
@@ -90,6 +94,6 @@
     }
 
     p {
-        height: 53px;
+        margin: 0px;
     }
 }

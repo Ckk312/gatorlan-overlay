@@ -1,6 +1,10 @@
 {
   "name": "gatorlan-overlay",
   "version": "0.0.0",
+  "compatibleDashboardVersion": "^4.4.0",
+  "compatibleGameVersions": [
+    "SPLATOON_3"
+  ],
   "description": "Splatoon GatorLAN NodeCG Overlay",
   "homepage": "",
   "author": {
@@ -9,10 +13,7 @@
     "url": "https://eucf.link"
   },
   "files": [
-    "dashboard",
-    "graphics",
-    "extension.js",
-    "extension"
+    "graphics"
   ],
   "keywords": [
     "",
@@ -67,19 +68,35 @@
     "ts-node": "*"
   },
   "devDependencies": {
-    "@nodecg/types": "^2.0.0",
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "@babel/preset-typescript": "^7.26.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@nodecg/types": "^2.5.3",
     "@parcel/config-default": "*",
     "@parcel/core": "*",
     "@parcel/reporter-cli": "*",
     "@parcel/validator-typescript": "*",
     "@types/node": "^18",
+    "@types/webpack": "^5.28.5",
+    "@types/webpack-livereload-plugin": "^2.3.6",
+    "babel-loader": "^9.2.1",
     "concurrently": "*",
     "copy-webpack-plugin": "^12.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
     "glob": "^10.2.7",
     "globby": "^14.0.2",
     "html-webpack-plugin": "^5.6.3",
+    "nodecg": "^2.5.3",
     "nodemon": "*",
-    "trash-cli": "*",
+    "sass": "^1.84.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "trash-cli": "^6.0.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^5.1.3",
     "webpack": "^5.97.1",

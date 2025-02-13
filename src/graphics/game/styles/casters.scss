@@ -20,7 +20,7 @@
     }
 
     .casters {
-        background-color: linear-gradient($glan-background-1, $glan-background-2);
+        background-image: linear-gradient($glan-background-1, $glan-background-2);
         padding: 12px 10px 4px;
 
         > .caster {
