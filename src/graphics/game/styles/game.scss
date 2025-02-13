@@ -14,3 +14,13 @@ body {
 
     color: $text-color;
 }
+
+#watermark {
+    position: absolute;
+    bottom: -12%;
+    right: -13%;
+
+    > img {
+        height: 300px;
+    }
+}

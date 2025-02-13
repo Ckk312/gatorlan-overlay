@@ -28,7 +28,7 @@
             }
 
             > .separator {
-                height: 8px;
+                height: 1px;
                 background-color: $glan-background-2;
             }
         }
@@ -64,16 +64,18 @@
 
             > .team-score {
                 font-weight: 700;
-                font-size: 45px;
-                line-height: 45px;
+                font-size: 35px;
+                line-height: 40px;
                 text-align: center;
+                vertical-align: middle;
             }
         }
 
-        p {
+        > p {
+            font-size: calc(5px + (9 - 5) * ((95vw - 50px) / (300 - 50)));
             justify-self: start;
-            font-size: 35px;
             line-height: 30px;
+            margin: 0px;
         }
 
         
@@ -83,9 +85,11 @@
         height: 36px;
         background-color: $glan-background-2;
         font-size: 30px;
-        font-weight: 300;
+        font-weight: 375;
 
         > p {
+            font-size: calc(1px + (4 - 1) * ((95vw - 30px) / (350 - 30)));
+            margin: 0px;
             transform: translate(0, -3px);
         }
     }

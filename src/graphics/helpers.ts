@@ -21,15 +21,15 @@ export function textBlinkSwap(
         }),
         gsap.to([elem, ...otherElem], {
             opacity: 1,
-            delay: 0.2
+            delay: 1
         }),
         gsap.to([elem, ...otherElem], {
             opacity: 0,
-            delay: 0.2,
+            delay: 1,
         }),
         gsap.to([elem, ...otherElem], {
             opacity: 1,
-            delay: 0.2,
+            delay: 1,
             onComplete: callbacks?.afterReveal
         })
     ]
