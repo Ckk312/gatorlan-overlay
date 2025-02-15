@@ -6,39 +6,45 @@
 
 .stages-layout {
     display: grid;
-    height: 650px;
-    margin-bottom: 100px;
+    height: 550px;
+    margin-bottom: 70px;
     filter: $global-drop-shadow;
 
+    .stage {
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+        margin-left: -10%;
+    }
+
     &.stage-count-3 {
-        width: 1300px;
-        gap: 50px;
+        width: 1350px;
         grid-template-columns: repeat(3, 1fr);
 
         .stage-name {
-            clip-path: polygon(0 0, 100% 0, 100% 92px, 370px 100%, 0 100%);
+            // clip-path: polygon(0 0, 100% 0, 100% 92px, 370px 100%, 0 100%);
         }
     }
 
     &.stage-count-5 {
-        width: 1550px;
-        gap: 40px;
+        width: 1590px;
         grid-template-columns: repeat(5, 1fr);
 
         .stage-name {
-            clip-path: polygon(0 0, 100% 0, 100% 92px, 248px 100%, 0 100%);
+            // clip-path: polygon(100% 90%);
         }
     }
 
     &.stage-count-7 {
-        width: 1750px;
-        gap: 15px;
+        width: 1765px;
         grid-template-columns: repeat(7, 1fr);
 
-        .stage-name {
-            clip-path: polygon(0 0, 100% 0, 100% 92px, 216px 100%, 0 100%);
+        p {
             font-size: 34px;
             line-height: 39px;
+        }
+
+        .stage-name {
+            // clip-path: polygon(10% 0, 100% 0, 100% 92px, 216px 100%, 0 100%);
+            
         }
     }
 
@@ -58,14 +64,14 @@
             width: calc(100% - 20px);
             padding: 0 10px;
             position: absolute;
-            text-align: right;
+            text-align: center;
             font-size: 36px;
             line-height: 42px;
-            transform: translate(5px, -5px);
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 
 
             > .stage-winner-text {
+                color: black;
                 display: inline;
                 margin-top: 5px;
                 position: relative;
@@ -84,6 +90,7 @@
             height: 45px;
 
             p {
+                color: black;
                 margin: 0;
             }
         }

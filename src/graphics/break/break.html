@@ -17,23 +17,18 @@
                 <div class="line"></div>
                 <div class="circle"></div>
             </div>
+            <div class="layout horiz c-vert info-row-music">
+                <i class="fas fa-music icon"></i>
+                <p id="main-scene-music" max-width="1200">Squid Sisters - Spicy Calamari Inkantation</p>
+            </div>
+            <div>
+                <img class="ipl-logo" src="./assets/ipl-powered-inkling.png">
+            </div>
             <div class="text-wrapper">
                 <img class="logo" src="assets/GLAN-XV_LOGO-PNG-05.png">
                 <div class="text">
                     <div>
                         <p class="flavor-text" id="main-flavor-text">Be right back!</p>
-                    </div>
-                    <div>
-                        <div class="main-info-row layout horiz c-vert info-row-music">
-                            <i class="fas fa-music icon"></i>
-                            <p id="main-scene-music" max-width="1200">Squid Sisters - Spicy Calamari Inkantation</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="main-info-row layout horiz c-vert info-row-timer">
-                            <i class="fas fa-clock icon"></i>
-                            <p id="main-scene-timer" use-inner-html>Next round begins in ~5 minutes...</p>
-                        </div>
                     </div>
                     <div>
                         <div class="main-info-row layout horiz c-vert">
@@ -49,6 +44,9 @@
     </div>
     <div class="content-wrapper teams-wrapper layout horiz c-vert c-horiz">
         <div class="teams-layout">
+            <div class="caster-lower-third">
+                
+            </div>
             <div class="team team-a layout vertical c-horiz">
                 <p class="team-name" max-width="530" align="center" id="scene-teams__team-a-name"></p>
                 <div class="separator"></div>
@@ -72,30 +70,32 @@
     </div>
 </div>
 <div class="info-bar-container layout horiz c-horiz c-vert">
-    <div class="info-bar layout horiz c-vert">
-        <div class="info-bar-logo layout horiz c-vert">
-            <img src="assets/gatorlan-watermark.png">
-        </div>
-        <div class="info-bar-content-wrapper">
-            <div class="info-bar-items layout horiz c-vert">
-                <div class="info-bar-item layout horiz c-vert">
-                    <div class="p-abs layout horiz c-vert" id="info-bar-casters-wrapper">
-                        <i class="fas fa-microphone icon"></i>
-                        <div class="layout vertical c-vert" id="info-bar-casters"></div>
+    <div class="info-bar-wrapper" >
+        <div class="info-bar layout horiz c-vert">
+            <div class="info-bar-logo layout horiz c-vert">
+                <img src="assets/gatorlan-watermark.png">
+            </div>
+            <div class="info-bar-content-wrapper">
+                <div class="info-bar-items layout horiz c-vert">
+                    <div class="info-bar-item layout horiz c-vert">
+                        <div class="p-abs layout horiz c-vert" id="info-bar-casters-wrapper">
+                            <i class="fas fa-microphone icon"></i>
+                            <div class="layout vertical c-vert" id="info-bar-casters"></div>
+                        </div>
+                        <div class="p-abs layout horiz c-vert" id="info-bar-twitters-wrapper">
+                            <i class="fab fa-twitter icon"></i>
+                            <div class="layout vertical c-vert" id="info-bar-twitters"></div>
+                        </div>
                     </div>
-                    <div class="p-abs layout horiz c-vert" id="info-bar-twitters-wrapper">
-                        <i class="fab fa-twitter icon"></i>
-                        <div class="layout vertical c-vert" id="info-bar-twitters"></div>
-                    </div>
-                </div>
-                <div class="info-bar-separator"></div>
-                <div class="info-bar-item layout horiz c-vert">
-                    <i class="fas fa-gamepad icon"></i>
-                    <div class="info-bar-scoreboard">
-                        <p id="info-bar-scoreboard__team-a-name" max-width="520"></p>
-                        <div class="score" id="info-bar-scoreboard__team-a-score">-</div>
-                        <p id="info-bar-scoreboard__team-b-name" max-width="520"></p>
-                        <div class="score" id="info-bar-scoreboard__team-b-score">-</div>
+                    <div class="info-bar-separator"></div>
+                    <div class="info-bar-item layout horiz c-vert">
+                        <i class="fas fa-gamepad icon"></i>
+                        <div class="info-bar-scoreboard">
+                            <p id="info-bar-scoreboard__team-a-name" max-width="520"></p>
+                            <div class="score" id="info-bar-scoreboard__team-a-score">-</div>
+                            <p id="info-bar-scoreboard__team-b-name" max-width="520"></p>
+                            <div class="score" id="info-bar-scoreboard__team-b-score">-</div>
+                        </div>
                     </div>
                 </div>
             </div>

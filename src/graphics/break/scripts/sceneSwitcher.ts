@@ -30,12 +30,12 @@ function onSceneSwitch(newActiveBreakScene: ActiveBreakScene, oldActiveBreakScen
             sceneSwitchTl.add(hideStages(), 'sceneHide');
     }
 
-    if (newActiveBreakScene === 'main') {
-        sceneSwitchTl.add(hideInfoBar(), 'sceneHide');
-        sceneSwitchTl.addLabel('sceneShow');
-    } else {
+    if (newActiveBreakScene === 'stages') {
         sceneSwitchTl.addLabel('sceneShow');
         sceneSwitchTl.add(showInfoBar(), 'sceneShow');
+    } else {
+        sceneSwitchTl.add(hideInfoBar(), 'sceneHide');
+        sceneSwitchTl.addLabel('sceneShow');
     }
 
     switch (newActiveBreakScene) {
@@ -100,7 +100,7 @@ function showMainScene(): gsap.core.Timeline {
 function showInfoBar(): gsap.core.Timeline {
     const tl = gsap.timeline({
         onStart: () => {
-            gsap.set('.info-bar', { display: 'flex' });
+            gsap.set('.info-bar-wrapper', { display: 'flex' });
         },
         defaults: {
             force3D: false
@@ -108,7 +108,7 @@ function showInfoBar(): gsap.core.Timeline {
     });
 
     tl
-        .to('.info-bar', {
+        .to('.info-bar-wrapper', {
             duration: 0.5,
             opacity: 1,
             y: 0,
@@ -121,7 +121,7 @@ function showInfoBar(): gsap.core.Timeline {
 function hideInfoBar(): gsap.core.Timeline {
     const tl = gsap.timeline({
         onComplete: () => {
-            gsap.set('.info-bar', { display: 'none' });
+            gsap.set('.info-bar-wrapper', { display: 'none' });
         },
         defaults: {
             force3D: false
@@ -129,7 +129,7 @@ function hideInfoBar(): gsap.core.Timeline {
     });
 
     tl
-        .to('.info-bar', {
+        .to('.info-bar-wrapper', {
             duration: 0.5,
             opacity: 0,
             y: 50,
@@ -156,6 +156,10 @@ function showTeams(): gsap.core.Timeline {
             y: 0,
             ease: 'power2.out',
             stagger: 0.1
+        })
+        .to('video', {
+            opacity: 0,
+            duration: 1,
         });
 
     return tl;
@@ -176,6 +180,11 @@ function hideTeams(): gsap.core.Timeline {
             y: 50,
             ease: 'power2.in',
             stagger: 0.1
+        })
+        .add(hideInfoBar())
+        .to('video', {
+            opacity: 1,
+            duration: 0
         });
 
     return tl;
@@ -190,12 +199,12 @@ function showStages(): gsap.core.Timeline {
 
     tl
         .fromTo('#stages-layout > .stage', {
-            y: -50,
+            x: -50,
             opacity: 0
         }, {
             duration: 0.5,
             opacity: 1,
-            y: 0,
+            x: 0,
             ease: 'power2.out',
             stagger: 0.1
         });
@@ -214,7 +223,7 @@ function hideStages(): gsap.core.Timeline {
         .to('#stages-layout > .stage', {
             duration: 0.5,
             opacity: 0,
-            y: 50,
+            x: 50,
             ease: 'power2.in',
             stagger: 0.1
         });

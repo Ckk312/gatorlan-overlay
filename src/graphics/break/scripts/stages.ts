@@ -53,7 +53,7 @@ const updateGames = async (games: UpdatedGames, winners: Array<UpdatedWinner>): 
                 prev += `
                     <div class="stage layout vertical" id="stage_${game.index}" style="opacity: 0">
                         <div class="stage-winner" id="winner_${game.index}">
-                            <div class="stage-winner-text"></div>
+                            <div class="stage-winner-text c-horiz c-vert"></div>
                         </div>
                         <div class="stage-image" style="background-image: url('${getStageUrl(game.stage)}')"></div>
                         <div class="stage-mode layout horiz c-horiz">
@@ -80,11 +80,11 @@ const updateGames = async (games: UpdatedGames, winners: Array<UpdatedWinner>): 
 
         if (activeBreakScene.value === 'stages') {
             tl.fromTo(target, {
-                y: -50
+                x: -50
             }, {
                 duration: 0.5,
                 ease: 'power2.out',
-                y: 0,
+                x: 0,
                 opacity: 1,
                 stagger: 0.1
             });
@@ -97,7 +97,7 @@ const updateGames = async (games: UpdatedGames, winners: Array<UpdatedWinner>): 
         tl.to(target, {
             duration: 0.5,
             ease: 'power2.in',
-            y: 50,
+            x: 50,
             opacity: 0,
             stagger: 0.1,
             onComplete: createStageElems

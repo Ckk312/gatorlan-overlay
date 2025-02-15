@@ -3,9 +3,23 @@
 
 @import './constants.scss';
 
+@font-face {
+    font-family: 'edo';
+    src: url(../../assets/edo.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anton Regular';
+    src: url(../../assets/Anton-Regular.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: 'Kanit', 'Noto Sans JP', sans-serif;
-    font-weight: 400;
+    font-family: 'Anton Regular', sans-serif;
+    font-weight: 200;
     font-size: 32px;
 }
 
@@ -14,9 +28,9 @@ body {
 }
 
 span.pronoun {
-    color: black;
+    color: white;
     font-weight: 500;
-    background-color: white;
+    // background-color: white;
     font-size: 28px;
     line-height: 28px;
     padding: 2px 4px;

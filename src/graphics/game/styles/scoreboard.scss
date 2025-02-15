@@ -88,6 +88,7 @@
         font-weight: 375;
 
         > p {
+            color: black;
             font-size: calc(1px + (4 - 1) * ((95vw - 30px) / (350 - 30)));
             margin: 0px;
             transform: translate(0, -3px);

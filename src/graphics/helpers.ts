@@ -11,6 +11,7 @@ export function textBlinkSwap(
     return[
         gsap.to([elem, ...otherElem], {
             opacity: 0,
+            duration: 2,
             onComplete: () => {
                 elem.innerText = text;
 
@@ -19,17 +20,20 @@ export function textBlinkSwap(
                 }
             }
         }),
+        gsap.to([], { duration: 2 }),
         gsap.to([elem, ...otherElem], {
             opacity: 1,
-            delay: 1
+            duration: 2,
         }),
+        gsap.to([], { duration: 2 }),
         gsap.to([elem, ...otherElem], {
             opacity: 0,
-            delay: 1,
+            duration: 2,
         }),
+        gsap.to([], { duration: 2 }),
         gsap.to([elem, ...otherElem], {
             opacity: 1,
-            delay: 1,
+            duration: 2,
             onComplete: callbacks?.afterReveal
         })
     ]
